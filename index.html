@@ -1,60 +1,104 @@
+<!-- declara que o documento é HTML5 -->
 <!DOCTYPE html>
+<!-- define o idioma da pagina -->
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site</title>
+    <!-- define a codificação de caracteres que
+    suporta acentos -->
+    <meta charset="UTF-8">
+    <!-- faz pagina se adaptar a largura dispositivo
+    (responsividade) -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <!-- titulo da nossa pagina -->
+    <title>Site exemplo - Estrutura básica HTML</title>
+
+    <link rel="stylesheet" href="styles.css"/>
+
 </head>
+
+<!-- É O CORPO DA NOSSA PAGINA, O QUE O USUÁRIO VÊ -->
 <body>
-  <header>
-    <h1>Meu Site</h1>
-    <nav>
-      <a href="#boas-vindas">Boas-vindas</a> |
-      <a href="#noticias">Notícias</a> |
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+    <!-- CABEÇALHO -->
+    <header>
+        <!-- TITULO PRINCIPAL DA PAGINA -->
+        <h1> Minha página Exemplo </h1>
+        <!-- subtitulo ou descricação do site -->
+        <P> Estrutura básica em HTML + CSS </P>
+        <!-- menu de navegação -->
+        <nav>
+            <ul>
+                <!-- cada li é um item do nosso menu -->
+                <li> <a href="#incio">Inicio</a></li>
+                <li> <a href="#noticia">Noticías</a></li>
+                <li> <a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section id="boas-vindas">
-      <h2>Boas-vindas</h2>
-      <p>Bem-vindo ao meu site!</p>
-    </section>
+    <!--TAG MAIN SIGNIFICA QUE ESSE É  CONTEUDO PRINCIPAL -->
+    <main id="incio">
+        <!-- secao de boas vindas -->
+        <section>
+            <h2> Bem-vindo(a)!</h2>
+            <article>
+                <h3> O que vamos ver? </h3>
+                <p> Esta página demsntra a
+                    <strong> estrutura semântica</strong>
+                    do HTMl com um pouco de CSS
+                    para o layout e visual </p>
+            </article>
+        </section>
 
-    <section id="noticias">
-      <h2>Notícias</h2>
-      <article>
-        <h3>Notícia 1</h3>
-        <p>Texto da primeira notícia.</p>
-      </article>
-      <article>
-        <h3>Notícia 2</h3>
-        <p>Texto da segunda notícia.</p>
-      </article>
-    </section>
+        <section id="noticias">
+            <h2> Noticías </h2>
+            <article>
+                <h3> Noticía 1 </h3>
+                <p> Exemplo de conteúdo de noticía </p>
+            </article>
+            <article>
+                <h3> Noticía 2 </h3>
+                <p> Exemplo de conteúdo de artigo </p>
+            </article>
+        </section>
 
-    <aside>
-      <h2>Links Relacionados</h2>
-      <a href="#">Link 1</a><br>
-      <a href="#">Link 2</a><br>
-      <a href="#">Link 3</a>
-    </aside>
+        <!-- conteudo lateral de links relacionados -->
+        <aside>
+            <h2>Links relacionados </h2>
+            <ul>
+                <li><a href="#incio"></a> Voltar para o incio </li>
+                <li><a href="#incio"></a> Ir para noticías </li>
+                <li><a href="#incio"></a> Ir para cotatos </li>
+            </ul>
+        </aside>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <form>
-        Nome: <input type="text" name="nome"><br><br>
-        Email: <input type="email" name="email"><br><br>
-        Mensagem:<br>
-        <textarea name="mensagem"></textarea><br><br>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+        <!-- secao de contato com formulário -->
+        <section id="contato">
+            <h2> Contato </h2>
+            <!-- tag que identifica que aqui é um formulário -->
+            <form>
+                <!-- campo de texto para o nome -->
+               <label for="nome"> Nome: </label> <br/>
+               <input id="nome" name="nome" type="text"/>
+                <br/> <br/>
+                <!-- campo de texto para o email -->
+                <label for="email"> Email: </label> <br/>
+                <input id="email" name="email" type="email"/>
+                <br/> <br/>
 
-  <footer>
-    <p>Rodapé do site</p>
-  </footer>
+                <label> Mensagem: </label> <br/>
+                <textarea id="mensagem" name="mensagem" rows="4">
+                </textarea>
+                <br/>
+                <!-- botao para envio do contato -->
+                <button type="submit"> Enviar </button>
+            </form>
+        </section>
+    </main>
 
+    <!-- RODAPE -->
+    <footer>
+        <p> &copy; 2025 - Exemplo para a disciplina </p>
+    </footer>
 </body>
 </html>
